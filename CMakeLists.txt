@@ -79,3 +79,5 @@ install(FILES
   DESTINATION lib/cmake/${PROJECT_NAME})
 
 export(EXPORT ${PROJECT_NAME}-targets NAMESPACE "${PROJECT_NAME}::" FILE ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-targets.cmake)
+
+install(FILES package.xml DESTINATION share/${PROJECT_NAME})
