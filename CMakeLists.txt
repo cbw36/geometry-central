@@ -54,6 +54,7 @@ add_subdirectory(src)
 
 # Mark cpp header files for installation
 install(DIRECTORY include/geometrycentral DESTINATION include)
+install(FILES deps/happly/happly.h DESTINATION include)
 
 install(TARGETS ${PROJECT_NAME} eigen nanort nanoflann happly
         EXPORT ${PROJECT_NAME}-targets
