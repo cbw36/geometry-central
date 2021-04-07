@@ -2,6 +2,7 @@
 
 #include "geometrycentral/surface/geometry.h"
 
+#include "geometrycentral/surface/halfedge_mesh.h"
 
 #include "nanort/nanort.h"
 
