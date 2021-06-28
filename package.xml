@@ -15,6 +15,8 @@
 
   <depend>suitesparse</depend>
 
+  <depend>ros_industrial_cmake_boilerplate</depend>
+
   <export>
     <build_type>cmake</build_type>
   </export>

@@ -2,8 +2,13 @@ cmake_minimum_required(VERSION 3.8.0)
 
 project(geometry-central VERSION 0.1.0 LANGUAGES CXX)
 
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+find_package(ros_industrial_cmake_boilerplate REQUIRED)
+find_package(SuiteSparse REQUIRED)
+
 ### Policy settings
 cmake_policy(SET CMP0054 NEW)   # don't implicitly dereference inside if()
+set(CMAKE_FIND_DEBUG_MODE 1)
 
 
 ### Process settings
@@ -81,4 +86,12 @@ install(FILES
 
 export(EXPORT ${PROJECT_NAME}-targets NAMESPACE "${PROJECT_NAME}::" FILE ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-targets.cmake)
 
+
+#list(APPEND PACKAGE_LIBRARIES ${PROJECT_NAME})
+#configure_package(NAMESPACE geometry-central TARGETS ${PROJECT_NAME}-targets)
+
+
 install(FILES package.xml DESTINATION share/${PROJECT_NAME})
+install(FILES
+  "${CMAKE_CURRENT_LIST_DIR}/cmake/FindSuiteSparse.cmake"
+  DESTINATION lib/cmake/${PROJECT_NAME})
