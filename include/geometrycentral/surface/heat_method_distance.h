@@ -26,7 +26,7 @@ class HeatMethodDistanceSolver {
 
 public:
   // === Constructor
-  HeatMethodDistanceSolver(IntrinsicGeometryInterface& geom, double tCoef = 1, bool useRobustLaplacian = false);
+  HeatMethodDistanceSolver(IntrinsicGeometryInterface& geom, double tCoef = 150, bool useRobustLaplacian = false);
 
   // === Methods
 
