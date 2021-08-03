@@ -218,6 +218,9 @@ Vector<double> HeatMethodDistanceSolver::computeDistanceRHS(const Vector<double>
   return distVec;
 }
 
+double HeatMethodDistanceSolver::getTime(){
+  return shortTime;
+}
 
 } // namespace surface
 } // namespace geometrycentral

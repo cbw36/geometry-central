@@ -46,6 +46,7 @@ public:
   // (returns WITHOUT performing constant shift to 0)
   Vector<double> computeDistanceRHS(const Vector<double>& rhs);
 
+  double getTime();
   // === Options and parameters
 
   const double tCoef; // the time parameter used for heat flow, measured as time = tCoef * mean_edge_length^2
